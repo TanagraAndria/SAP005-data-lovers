@@ -4,7 +4,7 @@
 	font-size: 100%;
 	box-sizing: border-box;
 	font-family: "Open Sans", sans-serif;
-	font-weight: bolder;
+	font-weight: normal;
 }
 
 nav,
@@ -186,18 +186,23 @@ button {
 	background-color: rgb(255, 255, 255);
 }
 
+.pokedex {
+	display: flex;
+	justify-content: center;
+}
+
 .name-pokemon {
 	font-size: 30px;
 	font-family: Arial;
 	text-transform: capitalize;
 	text-align: center;
-	flex-direction: column;
 }
 
 .pokedex-pokemon {
 	display: flex;
-	width: 10vw;
-	margin: 5px;
+	width: 45vw;
+	margin-left: 10px;
+	margin-top: 70px;
 	padding: 5px;
 	border: 1px solid silver;
 	border-radius: 10px;
@@ -206,9 +211,31 @@ button {
 
 .pokedex-pokemon-about {
 	display: flex;
+	width:35vw;
 	border: 1px solid silver;
 	border-radius: 10px;
-	width: 80vw;
+	margin-top: 70px;
+}
+
+.pokedex-list-about {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.pokedex-list-type {
+	margin-bottom: 20px;
+}
+
+.pokedex-list-weaknesses {
+	margin-bottom: 20px;
+}
+
+.pokedex-list-resistant {
+	margin-bottom: 20px;
+}
+
+.pokedex-list-km {
+	margin-bottom: 10px;
 }
 
 .pokedex-list {
