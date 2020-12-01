@@ -147,6 +147,133 @@ button {
 	filter: drop-shadow(3px 3px 3px gray);
 }
 
+
+.name-pokemon {
+	margin-top: 10px;
+	font-size: 30px;
+	font-family: Arial;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 10px;
+	text-transform: capitalize;
+}
+
+.pokedex {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 5vh;
+	margin-top: 5vh;
+}
+
+.pokedex-pokemon {
+	display: flex;
+	width: 45vw;
+	margin-left: 10px;
+	padding: 5px;
+	background-color: lightgray;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	justify-content: center;
+}
+
+.pokedex-pokemon-img {
+	max-width: 350px;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+}
+
+.pokedex-pokemon-about {
+	display: flex;
+	margin-left: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: dodgerblue;
+	color: #fff;
+	width:35vw;
+	border-radius: 10px;
+}
+
+.pokedex-list {
+	font-size: 15px;
+	font-family: Arial;
+
+}
+
+.info-title {
+	color: black;
+	font-weight: bold;
+}
+
+.info-value {
+	color: #fff;
+	font-weight: bold;
+}
+
+.pokedex-list-info {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.statistic {
+	color: black;
+	font-weight: bold;
+}
+
+.title-evolution {
+	font-size: 30px;
+	font-family: Arial;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 5vh;
+}
+
+.evolution {
+	display: flex;
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+	width: 82vw;
+	height: 40vh;
+	justify-content: space-around;
+	align-items: center;
+	margin: auto;
+	background-color: gray;
+	border-radius: 10px;
+}
+
+.card-evolution {
+	width: 16vw;
+	height: 32vh;
+	align-self: center;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.list-evolution {
+	position: relative;
+	top: 10%;
+	color: #fff;
+	text-transform: capitalize;
+}
+
+@media (min-width:579px) and (max-width: 867px)  {
+	.pokedex {
+		/*flex-direction: column;*/
+		height: 60vh;
+	}
+	.pokedex-pokemon-img {
+		max-width: 250px;
+		max-height: 300px;
+		width: auto;
+		height: auto;
+	}
+	.evolution {
+		/*flex-direction: column;*/
+	}
+}
+
 /*FOOTER*/
 .footer {
 	display: flex;
