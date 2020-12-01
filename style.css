@@ -19,6 +19,10 @@ button {
 	opacity: 0.9;
 }
 
+.bodyPokeInfo {
+	background-color: rgb(116, 167, 214);
+}
+
 /*HEADER*/
 .cover {
 	width: 100%;
@@ -36,6 +40,7 @@ button {
 .navbar {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 }
 .filter-name {
 	width: 300px;
@@ -49,33 +54,16 @@ button {
 }
 .menu {
 	margin: 0 15px;
+	font-size: 19px;
+	font-weight: bold;
 }
+
 .navbar:first-child {
 	margin-left: 0;
 }
 .navbar:last-child {
 	margin-right: 0;
 }
-@media (max-width: 656px) {
-	.cover {
-		flex-direction: column;
-	}
-	.navbar {
-		flex-direction: column;
-	}
-	.menu {
-		margin-bottom: 5px;
-	}
-	.filter-name {
-		width: 150px;
-		font-size: 9px;
-	}
-	.pokebola {
-		margin-bottom: 15px;
-	}
-}
-
-/*ORDER OPTION*/
 .order {
 	display: flex;
 	flex-direction: row-reverse;
@@ -90,15 +78,7 @@ button {
 	background-color: #fff;
 	border-color: rgb(70, 71, 71);
 }
-@media (max-width: 656px) {
-	.order {
-		flex-direction: column;
-	}
-	.option {
-		width: 150px;
-		font-size: 10px;
-	}
-}
+
 /*CARDS */
 
 #root {
@@ -108,17 +88,22 @@ button {
 	width: 80vw;
 	height: 70vh;
 	margin: auto;
+	display: block;
 }
 .card {
+	display: inline-block;
 	width: 12vw;
 	margin: 8px;
 	padding: 6px;
 	border: 1px solid silver;
 	border-radius: 10px;
 	text-align: center;
-	filter: drop-shadow(0 0 0.45rem rgb(124, 117, 119));
+	filter: drop-shadow(0 0 0.45rem rgb(17, 17, 17));
+	flex-wrap: wrap;
+	background-color: rgb(253, 253, 250);
 }
 .card-body {
+	display: inline-block;
 	text-align: center;
 	text-transform: capitalize;
 	justify-content: flex-start;
@@ -130,13 +115,16 @@ button {
 	color: rgb(192, 10, 10);
 	font-size: 20px;
 	text-align: center;
+	font-weight: bold;
 }
 
 .num {
 	font-family: Arial;
+	font-weight: bold;
 	color: rgb(0, 0, 0);
 	font-size: 15px;
 	text-align: center;
+	font-weight: bold;
 }
 
 .type {
@@ -144,6 +132,19 @@ button {
 	color: rgb(0, 0, 0);
 	font-size: 15px;
 	text-align: center;
+	font-weight: bold;
+}
+.poke-info {
+	border: 1px solid silver;
+	border-radius: 10px;
+	width: 90px;
+	height: 25px;
+	font-size: 15px;
+	font-family: Arial;
+	color: rgb(5, 20, 68);
+	font-weight: bold;
+	background-color: rgb(255, 255, 255);
+	filter: drop-shadow(3px 3px 3px gray);
 }
 
 /*FOOTER*/
@@ -161,84 +162,63 @@ button {
 	text-align: center;
 	font-size: 0, 3 vw;
 }
-@media (max-width: 656px) {
+
+@media (max-width: 600px) {
+	.card-body,
+	.cover,
+	.navbar,
+	menu {
+		width: 100%;
+	}
+	.card {
+		width: 60%;
+	}
+
+	.pokebola {
+		margin-bottom: 15px;
+	}
+	.cover {
+		margin-bottom: 30px;
+	}
+	.cover,
+	.filter-name,
+	.order,
+	.navbar {
+		flex-direction: column;
+	}
+	.menu {
+		margin-bottom: 5px;
+	}
+	.filter-name {
+		width: 150px;
+		margin: 5px 80px;
+		font-size: 9px;
+		justify-content: center;
+	}
+	.option {
+		width: 55vw;
+		font-size: 10px;
+		justify-content: center;
+		text-align: center;
+	}
+	.order {
+		margin: 5px 80px;
+		height: auto;
+		margin-top: 15vh;
+	}
+	.card {
+		margin: 20px 60px;
+	}
 	.footer {
 		flex-direction: column-reverse;
 		width: 100%;
 		bottom: 0;
-		position: relative;
 		padding: 1rem;
 		margin-top: 10px;
 	}
 	.footer p {
+		color: black;
 		text-align: center;
+		font-size: 0 3 vw;
 	}
-}
-
-.poke-info {
-	border: 1px solid silver;
-	border-radius: 10px;
-	width: 90px;
-	height: 25px;
-	font-size: 12px;
-	font-family: Arial;
-	color: rgb(25, 60, 175);
-	background-color: rgb(255, 255, 255);
-}
-
-.pokedex {
-	display: flex;
-	justify-content: center;
-}
-
-.name-pokemon {
-	font-size: 30px;
-	font-family: Arial;
-	text-transform: capitalize;
-	text-align: center;
-}
-
-.pokedex-pokemon {
-	display: flex;
-	width: 45vw;
-	margin-left: 10px;
-	margin-top: 70px;
-	padding: 5px;
-	border: 1px solid silver;
-	border-radius: 10px;
-	justify-content: center;
-}
-
-.pokedex-pokemon-about {
-	display: flex;
-	width:35vw;
-	border: 1px solid silver;
-	border-radius: 10px;
-	margin-top: 70px;
-}
-
-.pokedex-list-about {
-	margin-top: 20px;
-	margin-bottom: 10px;
-}
-
-.pokedex-list-type {
-	margin-bottom: 20px;
-}
-
-.pokedex-list-weaknesses {
-	margin-bottom: 20px;
-}
-
-.pokedex-list-resistant {
-	margin-bottom: 20px;
-}
-
-.pokedex-list-km {
-	margin-bottom: 10px;
-}
-
-.pokedex-list {
-	font-size: 15px;
-	font-family: Arial;
 }
