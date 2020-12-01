@@ -17,9 +17,10 @@ order.addEventListener('change', function (){
 })
 
 function load(data){
-for (const [i, pokemon] of data.entries()) {
+for (const pokemon of data) {
   const img = document.createElement('img');
   img.src = pokemon.img;
+  img.classList.add('img-card');
   
   let cardBody = document.createElement('div');
   cardBody.classList.add('card-body');
@@ -47,7 +48,7 @@ for (const [i, pokemon] of data.entries()) {
   button.classList.add('poke-info');
   button.innerHTML = 'Poke Info';
   button.addEventListener('click', function (){
-    goToPokedex(i);
+    goToPokedex(pokemon.num);
   })
 
   card.appendChild(img);
@@ -59,12 +60,6 @@ for (const [i, pokemon] of data.entries()) {
 }
 }
  load(data.pokemon);
-function goToPokedex(index) {
-  window.location.href = "/pokedex?pokeId=" + index;
+function goToPokedex(num) {
+  window.location.href = "/pokedex?pokeNum=" + num;
 }
-
-
-
-
- 
-

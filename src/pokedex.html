@@ -2,6 +2,7 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pokédex Informações</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -12,28 +13,31 @@
         <li class="menu"><a class="link-menu" href="http://localhost:5000">POKÉDEX</a></li>
       </nav>
     </header>
+    <h1 class="name-pokemon" id="name-pokemon"></h1>
     <div class="pokedex">
       <div class="pokedex-pokemon">
-        <div class="name-pokemon"></div>
-        <img class="pokedex-pokemon-img">
+        <img class="pokedex-pokemon-img" id="pokedex-pokemon-img">
       </div>
       <div class="pokedex-pokemon-about">
         <ol class="pokedex-list">
-          <li class="pokedex-list-about"></li>
-          <li class="pokedex-list-type"></li>
-          <li class="pokedex-list-weaknesses"></li>
-          <li class="pokedex-list-resistant"></li>
-          <li class="pokedex-list-km"></li>
-          <li class="pokedex-list-rarity"></li>
+          <li class="pokedex-list-info" id="list-about"></li>
+          <li class="pokedex-list-info" id="list-type"></li>
+          <li class="pokedex-list-info" id="list-weaknesses"></li>
+          <li class="pokedex-list-info" id="list-resistant"></li>
+          <li class="pokedex-list-info" id="list-km"></li>
+          <li class="pokedex-list-info" id="list-rarity"></li>
+          <li class="pokedex-list-info statistic" id="statistic">Estatísticas de Special Attack:</li>
+          <li class="pokedex-list-info" id="max-damage">oi</li>
+          <li class="pokedex-list-info" id="min-damage">oi</li>
         </ol>
       </div>
     </div>
+    <h2 class="title-evolution">Evoluções</h2>
     <div class="evolution"></div>
+    <footer class="footer">
+      <p></p>
+    </footer>
+    <script src="pokedex.js" type="module"></script>
   </body>
-  <footer class="footer">
-    <p></p>
-  </footer>
-  <script src="pokedex.js" type="module"></script>
-</body>
 
 </html>

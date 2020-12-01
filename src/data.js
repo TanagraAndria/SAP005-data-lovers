@@ -1,9 +1,17 @@
-function getPokemonIndexFromUrl() {
+function getPokemonNumFromUrl() {
   const queryString = window.location.search;
 
   const urlParameters = new URLSearchParams(queryString);
 
-  return urlParameters.get('pokeId');
+  return urlParameters.get('pokeNum');
+};
+
+function getPokemonByNum(data,num) {
+  let filtered = data.filter(pokemon => pokemon.num == num);
+  if(filtered[0]) {
+    return filtered[0];
+  }
+  return false;
 };
 
 function filterData(data,condition) {
@@ -20,6 +28,20 @@ function filterData(data,condition) {
 
 function orderData(data) {
   data.sort();
+};
+
+function computeStats(data, isMax) {
+  let attack;
+  if(!isMax) {
+    attack = data.reduce(function(prev, current) {
+      return (prev['base-damage'] < current['base-damage']) ? prev : current
+    });
+  }else {
+    attack = data.reduce(function(prev, current) {
+      return (prev['base-damage'] > current['base-damage']) ? prev : current
+    });
+  }
+  return attack;
 }
 
-export {getPokemonIndexFromUrl, filterData, orderData};
+export {getPokemonNumFromUrl, getPokemonByNum, filterData, orderData, computeStats};
