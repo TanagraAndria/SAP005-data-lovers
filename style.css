@@ -1,3 +1,4 @@
+/*RESET*/
 * {
 	margin: 0;
 	padding: 0;
@@ -17,10 +18,6 @@ button {
 	text-decoration: none;
 	cursor: pointer;
 	opacity: 0.9;
-}
-
-.bodyPokeInfo {
-	background-color: rgb(116, 167, 214);
 }
 
 /*HEADER*/
@@ -51,13 +48,17 @@ button {
 }
 .link-menu {
 	color: black;
+	font-weight: bold;
+	border-bottom: 1px solid black;
+}
+.link-menu:hover {
+	color: blue;
+	border-bottom: 1px solid blue;
 }
 .menu {
 	margin: 0 15px;
 	font-size: 19px;
-	font-weight: bold;
 }
-
 .navbar:first-child {
 	margin-left: 0;
 }
@@ -81,14 +82,14 @@ button {
 
 /*CARDS */
 
-#root {
+.root {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	width: 80vw;
 	height: 70vh;
 	margin: auto;
-	display: block;
+	margin-bottom: 5vh;
 }
 .card {
 	display: inline-block;
@@ -97,6 +98,7 @@ button {
 	padding: 6px;
 	border: 1px solid silver;
 	border-radius: 10px;
+	margin-bottom: 5vh;
 	text-align: center;
 	filter: drop-shadow(0 0 0.45rem rgb(17, 17, 17));
 	flex-wrap: wrap;
@@ -146,8 +148,9 @@ button {
 	background-color: rgb(255, 255, 255);
 	filter: drop-shadow(3px 3px 3px gray);
 }
-
-
+.poke-info:hover {
+	color: green;
+}
 .name-pokemon {
 	margin-top: 10px;
 	font-size: 30px;
@@ -258,36 +261,23 @@ button {
 	text-transform: capitalize;
 }
 
-@media (min-width:579px) and (max-width: 867px)  {
-	.pokedex {
-		/*flex-direction: column;*/
-		height: 60vh;
-	}
-	.pokedex-pokemon-img {
-		max-width: 250px;
-		max-height: 300px;
-		width: auto;
-		height: auto;
-	}
-	.evolution {
-		/*flex-direction: column;*/
-	}
-}
-
 /*FOOTER*/
 .footer {
 	display: flex;
+	justify-content: center;
 	flex-direction: column;
 	background-color: yellow;
-	position: fixed;
+	margin-top: 5vh;
 	left: 0;
+	right:0;
 	bottom: 0;
-	width: 100%;
+	width: 100vw;
+	height: 8vh;
 }
 .footer p {
 	color: black;
 	text-align: center;
-	font-size: 0, 3 vw;
+	font-size: 0, 3vw;
 }
 
 @media (max-width: 600px) {
@@ -312,9 +302,11 @@ button {
 	.order,
 	.navbar {
 		flex-direction: column;
+		margin-bottom: 10vh;
 	}
 	.menu {
-		margin-bottom: 5px;
+		margin-bottom: 2vh;
+		margin-top: 2vh;
 	}
 	.filter-name {
 		width: 150px;
@@ -341,11 +333,119 @@ button {
 		width: 100%;
 		bottom: 0;
 		padding: 1rem;
-		margin-top: 10px;
+		margin-top: 5vh;
 	}
 	.footer p {
 		color: black;
 		text-align: center;
-		font-size: 0 3 vw;
+		font-size: 0 3vw;
+	}
+}
+
+@media (min-width: 423px) and (max-width: 799px) {
+	.pokedex {
+		flex-direction: column;
+	}
+	.pokedex-pokemon {
+		width: 85vw;
+		height: 40vh;
+		margin: auto;
+		margin-bottom: 5vh;
+	}
+	.pokedex-pokemon-img {
+		max-width: 280px;
+		max-height: 280px;
+		width: auto;
+		height: auto;
+	}
+	.pokedex-pokemon-about {
+		width: 85vw;
+		height: 60vh;
+		margin: auto;
+		margin-bottom: 5vh;
+	}
+	.title-evolution {
+		font-size: 30px;
+		font-family: Arial;
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 5vh;
+	}
+	.evolution {
+		flex-direction: column;
+		width: 80vw;
+		height: 100vh;
+	}
+	.card-evolution {
+		width:34vw;
+		height: 30vh;
+		margin-top: 2vh;
+		align-self: center;
+		border: 5px solid #fff;
+		border-radius: 50%;
+		text-align: center;
+	}
+	.card-evolution:last-child {
+		margin-bottom: 2vh;
+	}
+	.list-evolution {
+		position: relative;
+		top: 10%;
+		color: #fff;
+		text-transform: capitalize;
+	}
+}
+
+@media (min-width: 300px) and (max-width: 422px) {
+	.pokedex {
+		flex-direction: column;
+	}
+	.pokedex-pokemon {
+		width: 90vw;
+		height: 30vh;
+		margin: auto;
+		margin-bottom: 5vh;
+	}
+	.pokedex-pokemon-img {
+		max-width: 250px;
+		max-height: 250px;
+		width: auto;
+		height: auto;
+	}
+	.pokedex-pokemon-about {
+		width: 90vw;
+		height: 80vh;
+		margin: auto;
+		margin-bottom: 5vh;
+	}
+	.title-evolution {
+		font-size: 30px;
+		font-family: Arial;
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 5vh;
+	}
+	.evolution {
+		flex-direction: column;
+		width: 90vw;
+		height: 100vh;
+	}
+	.card-evolution {
+		width:50vw;
+		height: 31vh;
+		margin-top: 2vh;
+		align-self: center;
+		border: 5px solid #fff;
+		border-radius: 50%;
+		text-align: center;
+	}
+	.card-evolution:last-child {
+		margin-bottom: 2vh;
+	}
+	.list-evolution {
+		position: relative;
+		top: 1%;
+		color: #fff;
+		text-transform: capitalize;
 	}
 }
