@@ -55,7 +55,9 @@ for (const pokemon of data) {
   card.appendChild(cardBody);
   cardBody.appendChild(orderedList);
   cardBody.appendChild(button);
-  orderedList.appendChild(listInfo1).appendChild(listInfo2).appendChild(listInfo3);
+  orderedList.appendChild(listInfo1);
+  orderedList.appendChild(listInfo2);
+  orderedList.appendChild(listInfo3);
   document.getElementById('root').appendChild(card);
 }
 }
