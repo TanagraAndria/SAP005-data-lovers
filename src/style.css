@@ -31,7 +31,7 @@ button {
 	flex-direction: row;
 }
 .pokebola {
-	width: 60px;
+	width: 14vw;
 	margin: 0 10px;
 }
 .navbar {
@@ -292,6 +292,7 @@ button {
 	}
 
 	.pokebola {
+		width: 55vw;
 		margin-bottom: 15px;
 	}
 	.cover {
@@ -309,8 +310,8 @@ button {
 		margin-top: 2vh;
 	}
 	.filter-name {
-		width: 150px;
-		margin: 5px 80px;
+		width: 55vw;
+		margin: 10px 80px;
 		font-size: 9px;
 		justify-content: center;
 	}
@@ -339,6 +340,23 @@ button {
 		color: black;
 		text-align: center;
 		font-size: 0 3vw;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 1055px) {
+	.pokebola {
+		width: 30vw;
+	}
+	.root {
+		width: 90vw;
+	}
+	.card {
+		width: 27vw;
+		margin-left: 1vw;
+	}
+
+	.card-body {
+		width: 15vw;
 	}
 }
 
