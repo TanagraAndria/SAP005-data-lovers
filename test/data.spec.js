@@ -1,9 +1,9 @@
-import { example, anotherExample } from '../src/data.js';
+import {getPokemonNumFromUrl, getPokemonByNum, filterData, orderData, computeStats } from '../src/data.js';
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
+describe('verificar se é uma função', () => {
+  it('é uma função', () => {
+    expect(typeof getPokemonNumFromUrl).toBe('function');
   });
 
   it('returns `example`', () => {
