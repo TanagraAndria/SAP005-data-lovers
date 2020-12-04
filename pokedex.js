@@ -2,8 +2,6 @@ import data from './data/pokemon/pokemon.js';
 import {getPokemonNumFromUrl, getPokemonByNum, computeStats} from './data.js';
 
 const pokemon = getPokemonByNum(data.pokemon, getPokemonNumFromUrl());
-
-console.log(computeStats(pokemon['special-attack']));
 const bestAttack = computeStats(pokemon['special-attack'], true);
 const worstAttack = computeStats(pokemon['special-attack'], false);
 

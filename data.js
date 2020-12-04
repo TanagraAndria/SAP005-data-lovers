@@ -4,7 +4,7 @@ function getPokemonNumFromUrl() {
   const urlParameters = new URLSearchParams(queryString);
 
   return urlParameters.get('pokeNum');
-};
+}
 
 function getPokemonByNum(data,num) {
   let filtered = data.filter(pokemon => pokemon.num == num);
@@ -12,11 +12,11 @@ function getPokemonByNum(data,num) {
     return filtered[0];
   }
   return false;
-};
+}
 
 function filterData(data,condition) {
-  return data.filter(pokemon => { 
-    if(condition.name != 'undefined' && pokemon.name.includes(condition.name)) {
+  return data.filter(pokemon => {
+    if(condition.name != undefined && pokemon.name.includes(condition.name)) {
       return true;
     }
     if(condition.type &&  pokemon.type.indexOf(condition.type) != -1 || condition.type == "") {
@@ -24,11 +24,19 @@ function filterData(data,condition) {
     }
     return false;
   });
-};
+}
 
-function orderData(data) {
-  data.sort();
-};
+function orderData(data, sortBy, sortOrder) {
+  if(sortOrder == 'asc') {
+    data.sort(function(current, next) {
+      return current[sortBy] < next[sortBy] ? -1 : current[sortBy] > next[sortBy] ? 1 : 0;
+    });
+  }else {
+    data.sort(function(current, next) {
+      return current[sortBy] > next[sortBy] ? -1 : current[sortBy] < next[sortBy] ? 1 : 0;
+    });
+  }
+}
 
 function computeStats(data, isMax) {
   let attack;

@@ -12,7 +12,11 @@ const order = document.getElementById('select-option');
 order.addEventListener('change', function (){
   let pokemons= filterData(data.pokemon, {type: order.options[order.selectedIndex].value});
   document.getElementById('root').innerHTML = "";
-  orderData(pokemons);
+  if(order.options[order.selectedIndex].value) {
+    orderData(pokemons,"name", "asc");
+  }else {
+    orderData(pokemons,"num", "asc");
+  }
   load(pokemons);
 })
 
@@ -59,8 +63,9 @@ for (const pokemon of data) {
   orderedList.appendChild(listInfo2);
   orderedList.appendChild(listInfo3);
   document.getElementById('root').appendChild(card);
+  }
 }
-}
+
  load(data.pokemon);
 function goToPokedex(num) {
   window.location.href = "/pokedex?pokeNum=" + num;
