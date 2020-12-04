@@ -15,9 +15,11 @@ Para o desenvolvimento do projeto, realizamos pesquisas com os usuários do jogo
 coletando as principais necessidades de dados para auxiliar em um maior desempenho
 e agilidade nas missões do jogo.
 
-Para acessá-lo aperte neste link:
+Para acessá-lo clique em um dos links abaixo:
 
+`<link>` : < https://jessicacavalcante.github.io/SAP005-data-lovers/>
 
+`<link>` : < https://tanagraandria.github.io/SAP005-data-lovers/>
 
 
 
@@ -55,6 +57,9 @@ Para acessá-lo aperte neste link:
 
 * Protótipo de baixa fidelidade foi desenvolvido utilizando o software adobe illustraitor:
 ![alt text](src/img/site.jpg)
+
+* Círculo de cores
+![alt text](src/img/cores.png)
 
 ## 3. Histórias de usuário
 
