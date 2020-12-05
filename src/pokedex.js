@@ -7,13 +7,13 @@ const worstAttack = computeStats(pokemon['special-attack'], false);
 
 document.getElementById('name-pokemon').innerHTML = pokemon.name;
 document.getElementById('pokedex-pokemon-img').src = 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/'+ pokemon.num + '.png';
-document.getElementById('list-about').innerHTML = '<span class="info-title">Sobre: </span><span class="info-value">' + pokemon.about  + '</span>';
-document.getElementById('list-type').innerHTML = '<span class="info-title">Tipo: </span><span class="info-value">' + pokemon.type  + '</span>';
-document.getElementById('list-weaknesses').innerHTML = '<span class="info-title">Fraquezas: </span><span class="info-value">' + pokemon.weaknesses  + '</span>';
-document.getElementById('list-resistant').innerHTML ='<span class="info-title">Resistência: </span><span class="info-value">' + pokemon.resistant  + '</span>';
+document.getElementById('list-about').innerHTML = '<span class="info-title">About: </span><span class="info-value">' + pokemon.about  + '</span>';
+document.getElementById('list-type').innerHTML = '<span class="info-title">Type: </span><span class="info-value">' + pokemon.type  + '</span>';
+document.getElementById('list-weaknesses').innerHTML = '<span class="info-title">Weaknesses: </span><span class="info-value">' + pokemon.weaknesses  + '</span>';
+document.getElementById('list-resistant').innerHTML ='<span class="info-title">Resistant: </span><span class="info-value">' + pokemon.resistant  + '</span>';
 document.getElementById('list-km').innerHTML ='<span class="info-title">Km Egg: </span><span class="info-value">' + pokemon.egg  + '</span>';
-document.getElementById('max-damage').innerHTML ='O maior dano causado é o ' + bestAttack.name + ' e seu valor é de ' + bestAttack['base-damage'] + '.';
-document.getElementById('min-damage').innerHTML ='O menor dano causado é o ' + worstAttack.name + ' e seu valor é de ' + worstAttack['base-damage'] + '.';
+document.getElementById('max-damage').innerHTML ='The greatest damage done is the ' + bestAttack.name + ' and its value is ' + bestAttack['base-damage'] + '.';
+document.getElementById('min-damage').innerHTML ='The least damage done is the ' + worstAttack.name + ' and its value is ' + worstAttack['base-damage'] + '.';
 
 function getCard(data) {
     let img = document.createElement('img');
