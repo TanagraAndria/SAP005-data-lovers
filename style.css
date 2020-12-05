@@ -181,9 +181,9 @@ button {
 
 .pokedex-pokemon-img {
 	max-width: 350px;
-    max-height: 350px;
-    width: auto;
-    height: auto;
+	max-height: 350px;
+	width: auto;
+	height: auto;
 }
 
 .pokedex-pokemon-about {
@@ -193,14 +193,13 @@ button {
 	padding-right: 10px;
 	background-color: dodgerblue;
 	color: #fff;
-	width:35vw;
+	width: 35vw;
 	border-radius: 10px;
 }
 
 .pokedex-list {
 	font-size: 15px;
 	font-family: Arial;
-
 }
 
 .info-title {
@@ -269,7 +268,7 @@ button {
 	background-color: yellow;
 	margin-top: 5vh;
 	left: 0;
-	right:0;
+	right: 0;
 	bottom: 0;
 	width: 100vw;
 	height: 8vh;
@@ -395,7 +394,7 @@ button {
 		height: 100vh;
 	}
 	.card-evolution {
-		width:34vw;
+		width: 34vw;
 		height: 30vh;
 		margin-top: 2vh;
 		align-self: center;
@@ -449,7 +448,7 @@ button {
 		height: 100vh;
 	}
 	.card-evolution {
-		width:50vw;
+		width: 50vw;
 		height: 31vh;
 		margin-top: 2vh;
 		align-self: center;
