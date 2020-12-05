@@ -68,5 +68,5 @@ for (const pokemon of data) {
 
  load(data.pokemon);
 function goToPokedex(num) {
-  window.location.href = "/pokedex?pokeNum=" + num;
+  window.location.href = "pokedex?pokeNum=" + num;
 }
