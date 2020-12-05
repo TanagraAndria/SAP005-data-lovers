@@ -81,6 +81,7 @@ A segunda página, a Poke Info, é ativada no card de cada pokémon, nela é apr
 #### Testes de usabilidade
 
 No teste de usabilidade com usuários pokémon go constatamos:
+
 * Na página principal havia um menu sem usabilidade, então o retiramos.
 
 * No botão Poke Info e no menu pokédex para retornar a página principal estavam sem destaque. Para solucionar adicionamos uma cor diferente no botão ao passar o mouse.
