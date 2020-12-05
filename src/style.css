@@ -366,7 +366,7 @@ button {
 	}
 	.pokedex-pokemon {
 		width: 85vw;
-		height: 40vh;
+		height: 50vh;
 		margin: auto;
 		margin-bottom: 5vh;
 	}
@@ -378,7 +378,7 @@ button {
 	}
 	.pokedex-pokemon-about {
 		width: 85vw;
-		height: 60vh;
+		height: 65vh;
 		margin: auto;
 		margin-bottom: 5vh;
 	}
@@ -420,7 +420,7 @@ button {
 	}
 	.pokedex-pokemon {
 		width: 90vw;
-		height: 30vh;
+		height: 50vh;
 		margin: auto;
 		margin-bottom: 5vh;
 	}
@@ -432,7 +432,7 @@ button {
 	}
 	.pokedex-pokemon-about {
 		width: 90vw;
-		height: 80vh;
+		height: 85vh;
 		margin: auto;
 		margin-bottom: 5vh;
 	}

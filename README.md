@@ -85,6 +85,10 @@ No teste de usabilidade com usuários pokémon go constatamos:
 
 * No botão Poke Info e no menu pokédex para retornar a página principal estavam sem destaque. Para solucionar adicionamos uma cor diferente no botão ao passar o mouse.
 
+* Informações com linguagens diferentes foram identificadas pelos usuários e foi corrigido.
+
+* Tamanho de imagem vista no celular, a imagem estava distorcida e foi corrigido.
+
 
 
 
